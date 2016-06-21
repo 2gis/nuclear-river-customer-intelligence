@@ -20,13 +20,13 @@ Include 'installhosts.ps1'
 # OData
 function QueueBuild-OData {
 	if ($Metadata['CustomerIntelligence.Querying.Host']){
-		$projectFileName = Get-ProjectFileName 'CustomerIntelligence.Querying.Host'
+		$projectFileName = Get-ProjectFileName '.' 'CustomerIntelligence.Querying.Host'
 		QueueBuild-WebPackage $projectFileName 'CustomerIntelligence.Querying.Host'
 	}
 }
 function QueueDeploy-OData {
 	if ($Metadata['CustomerIntelligence.Querying.Host']){
-		QueueDeploy-WebPackage 'CustomerIntelligence.Querying.Host'
+		QueueDeploy-WebPackage '.' 'CustomerIntelligence.Querying.Host'
 	}
 }
 

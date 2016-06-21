@@ -10,7 +10,7 @@ Import-Module "$BuildToolsRoot\modules\metadata.psm1" -DisableNameChecking
 
 Task Update-Schemas -Precondition { $Metadata['CustomerIntelligence.StateInitialization.Host'] -and $Metadata['UpdateSchemas'] } {
 
-	$projectFileName = Get-ProjectFileName 'CustomerIntelligence' 'CustomerIntelligence.StateInitialization.Host'
+	$projectFileName = Get-ProjectFileName '.' 'CustomerIntelligence.StateInitialization.Host'
 	$projectDir = Split-Path $projectFileName
 	$configFileName = Join-Path $projectDir 'app.config'
 	[xml]$config = Get-TransformedConfig $configFileName 'CustomerIntelligence.StateInitialization.Host'

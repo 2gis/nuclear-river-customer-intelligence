@@ -8,7 +8,7 @@ Import-Module "$BuildToolsRoot\modules\artifacts.psm1" -DisableNameChecking
 
 function QueueBuild-BulkTool  {
 	if ($Metadata['CustomerIntelligence.StateInitialization.Host']){
-		$projectFileName = Get-ProjectFileName 'CustomerIntelligence.StateInitialization.Host'
+		$projectFileName = Get-ProjectFileName '.' 'CustomerIntelligence.StateInitialization.Host'
 		QueueBuild-AppPackage $projectFileName 'CustomerIntelligence.StateInitialization.Host'
 	}
 }
