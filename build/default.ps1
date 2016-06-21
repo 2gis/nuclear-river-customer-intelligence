@@ -26,14 +26,14 @@ function QueueBuild-OData {
 }
 function QueueDeploy-OData {
 	if ($Metadata['CustomerIntelligence.Querying.Host']){
-		QueueDeploy-WebPackage '.' 'CustomerIntelligence.Querying.Host'
+		QueueDeploy-WebPackage 'CustomerIntelligence.Querying.Host'
 	}
 }
 
 # task service
 function QueueBuild-TaskService {
 	if ($Metadata['CustomerIntelligence.Replication.Host']){
-		$projectFileName = Get-ProjectFileName 'CustomerIntelligence.Replication.Host'
+		$projectFileName = Get-ProjectFileName '.' 'CustomerIntelligence.Replication.Host'
 		QueueBuild-AppPackage $projectFileName 'CustomerIntelligence.Replication.Host'
 	}
 }
