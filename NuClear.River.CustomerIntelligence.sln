@@ -8,9 +8,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{C1C7C6
 		.nuget\NuGet.Config = .nuget\NuGet.Config
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomerIntelligence.Querying.Host", "CustomerIntelligence\CustomerIntelligence.Querying.Host\CustomerIntelligence.Querying.Host.csproj", "{4D48AAC9-C244-41A3-9E89-187860717B1F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomerIntelligence.Querying.Host", "CustomerIntelligence.Querying.Host\CustomerIntelligence.Querying.Host.csproj", "{4D48AAC9-C244-41A3-9E89-187860717B1F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomerIntelligence.Replication.Host", "CustomerIntelligence\CustomerIntelligence.Replication.Host\CustomerIntelligence.Replication.Host.csproj", "{C332689C-FFAB-44D4-91BD-920B134C0982}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomerIntelligence.Replication.Host", "CustomerIntelligence.Replication.Host\CustomerIntelligence.Replication.Host.csproj", "{C332689C-FFAB-44D4-91BD-920B134C0982}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "build", "build", "{D0CF69C9-AB27-4062-8B7A-D7391C65EFE3}"
 EndProject
@@ -40,28 +40,28 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{8A6466
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Schemas", "Schemas", "{02A5AF22-F311-46F6-A155-D022430BD529}"
 	ProjectSection(SolutionItems) = preProject
-		CustomerIntelligence\Schemas\BIT.sql = CustomerIntelligence\Schemas\BIT.sql
-		CustomerIntelligence\Schemas\CustomerIntelligence.sql = CustomerIntelligence\Schemas\CustomerIntelligence.sql
-		CustomerIntelligence\Schemas\ERM.sql = CustomerIntelligence\Schemas\ERM.sql
+		Schemas\BIT.sql = Schemas\BIT.sql
+		Schemas\CustomerIntelligence.sql = Schemas\CustomerIntelligence.sql
+		Schemas\ERM.sql = Schemas\ERM.sql
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomerIntelligence.Replication", "CustomerIntelligence\CustomerIntelligence.Replication\CustomerIntelligence.Replication.csproj", "{B0A258D5-7387-4FB2-BA18-B51550DA3F0B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomerIntelligence.Replication", "CustomerIntelligence.Replication\CustomerIntelligence.Replication.csproj", "{B0A258D5-7387-4FB2-BA18-B51550DA3F0B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomerIntelligence.Storage", "CustomerIntelligence\CustomerIntelligence.Storage\CustomerIntelligence.Storage.csproj", "{FA1074A6-B89D-45DF-9B73-6881BEF46E33}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomerIntelligence.Storage", "CustomerIntelligence.Storage\CustomerIntelligence.Storage.csproj", "{FA1074A6-B89D-45DF-9B73-6881BEF46E33}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomerIntelligence.OperationsProcessing", "CustomerIntelligence\CustomerIntelligence.OperationsProcessing\CustomerIntelligence.OperationsProcessing.csproj", "{794F43F6-E4F3-4A80-A2B0-195D3560CB35}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomerIntelligence.OperationsProcessing", "CustomerIntelligence.OperationsProcessing\CustomerIntelligence.OperationsProcessing.csproj", "{794F43F6-E4F3-4A80-A2B0-195D3560CB35}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomerIntelligence.OperationsProcessing.Tests", "CustomerIntelligence\Tests\CustomerIntelligence.OperationsProcessing.Tests\CustomerIntelligence.OperationsProcessing.Tests.csproj", "{19CFD12D-582D-4685-A40B-7E3A13B9C5D3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomerIntelligence.OperationsProcessing.Tests", "Tests\CustomerIntelligence.OperationsProcessing.Tests\CustomerIntelligence.OperationsProcessing.Tests.csproj", "{19CFD12D-582D-4685-A40B-7E3A13B9C5D3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomerIntelligence.Replication.Tests", "CustomerIntelligence\Tests\CustomerIntelligence.Replication.Tests\CustomerIntelligence.Replication.Tests.csproj", "{25AACA77-648A-4462-8EC1-709963219C8E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomerIntelligence.Replication.Tests", "Tests\CustomerIntelligence.Replication.Tests\CustomerIntelligence.Replication.Tests.csproj", "{25AACA77-648A-4462-8EC1-709963219C8E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomerIntelligence.Querying.Tests", "CustomerIntelligence\Tests\CustomerIntelligence.Querying.Tests\CustomerIntelligence.Querying.Tests.csproj", "{CAA90CA3-1FAB-43E0-A369-62BFB8092596}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomerIntelligence.Querying.Tests", "Tests\CustomerIntelligence.Querying.Tests\CustomerIntelligence.Querying.Tests.csproj", "{CAA90CA3-1FAB-43E0-A369-62BFB8092596}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{814C4FAC-A5D7-4557-A0A4-E79FEBCE6156}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomerIntelligence.Replication.StateInitialization.Tests", "CustomerIntelligence\Tests\CustomerIntelligence.Replication.DataTest.Model\CustomerIntelligence.Replication.StateInitialization.Tests.csproj", "{04BC80F1-62A5-489C-916A-9F090AED7CF9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomerIntelligence.Replication.StateInitialization.Tests", "Tests\CustomerIntelligence.Replication.DataTest.Model\CustomerIntelligence.Replication.StateInitialization.Tests.csproj", "{04BC80F1-62A5-489C-916A-9F090AED7CF9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomerIntelligence.StateInitialization.Host", "CustomerIntelligence\CustomerIntelligence.StateInitialization.Host\CustomerIntelligence.StateInitialization.Host.csproj", "{C6DE2A90-B4B9-4CD5-AEF0-7E6607B102A0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomerIntelligence.StateInitialization.Host", "CustomerIntelligence.StateInitialization.Host\CustomerIntelligence.StateInitialization.Host.csproj", "{C6DE2A90-B4B9-4CD5-AEF0-7E6607B102A0}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "build", "build\build.csproj", "{8D547BD0-0127-4FC4-AD50-ECDD7BB17152}"
 EndProject

@@ -4,18 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{C6DE2A90-B4B9-4CD5-AEF0-7E6607B102A0}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <ProjectGuid>{04BC80F1-62A5-489C-916A-9F090AED7CF9}</ProjectGuid>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>NuClear.CustomerIntelligence.StateInitialization.Host</RootNamespace>
-    <AssemblyName>2GIS.NuClear.CustomerIntelligence.StateInitialization.Host</AssemblyName>
+    <RootNamespace>NuClear.CustomerIntelligence.Replication.StateInitialization.Tests</RootNamespace>
+    <AssemblyName>2GIS.NuClear.CustomerIntelligence.Replication.StateInitialization.Tests</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -25,7 +23,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -36,6 +33,10 @@
   <ItemGroup>
     <Reference Include="2GIS.NuClear.Assembling, Version=0.0.0.0, Culture=neutral, PublicKeyToken=28ae40ac5f6ca219, processorArchitecture=MSIL">
       <HintPath>..\..\packages\2GIS.NuClear.Assembling.1.0.4\lib\portable-net451+win81+wpa81\2GIS.NuClear.Assembling.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="2GIS.NuClear.DataTest.Metamodel, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\2GIS.NuClear.DataTest.0.17.0-linq2db\lib\net46\2GIS.NuClear.DataTest.Metamodel.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="2GIS.NuClear.IdentityService.Client, Version=0.0.0.0, Culture=neutral, PublicKeyToken=b743d84006fae806, processorArchitecture=MSIL">
@@ -209,20 +210,40 @@
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.ServiceModel" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BulkReplicationCommands.cs" />
+    <Compile Include="BulkReplicationAdapter.cs" />
+    <Compile Include="ArrangeMetadataElementBuilderExtensions.cs" />
     <Compile Include="ConnectionStringName.cs" />
-    <Compile Include="DataObjectTypesProviderFactory.cs" />
-    <Compile Include="Assembling\StateInitializationRoot.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="ContextName.cs" />
+    <Compile Include="Identitites\Connections\BitTestConnectionStringIdentity.cs" />
+    <Compile Include="Identitites\Connections\CustomerIntelligenceTestConnectionStringIdentity.cs" />
+    <Compile Include="Identitites\Connections\ErmTestConnectionStringIdentity.cs" />
+    <Compile Include="Identitites\Connections\FactsTestConnectionStringIdentity.cs" />
+    <Compile Include="Keys.cs" />
+    <Compile Include="MappedConnectionStringSettings.cs" />
+    <Compile Include="TestCaseMetadataSource.CategoryDictionary.cs" />
+    <Compile Include="TestCaseMetadataSource.Client.cs" />
+    <Compile Include="TestCaseMetadataSource.ProjectStatistics.cs" />
+    <Compile Include="TestCaseMetadataSource.Territory.cs" />
+    <Compile Include="TestCaseMetadataSource.CategoryGroupDictionary.cs" />
+    <Compile Include="TestCaseMetadataSource.IgnoredEntities.cs" />
+    <Compile Include="TestCaseMetadataSource.CategoryGroup.cs" />
+    <Compile Include="TestCaseMetadataSource.Project.cs" />
+    <Compile Include="TestCaseMetadataSource.Firm.cs" />
+    <Compile Include="TestCaseMetadataSource.Directions.cs" />
+    <Compile Include="TestCaseMetadataSource.cs" />
+    <Compile Include="Identitites\Connections\ErmMasterConnectionStringIdentity.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RunnerConnectionStringSettings.cs" />
+    <Compile Include="SchemaMetadataSource.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config">
+    <None Include="app.config">
       <SubType>Designer</SubType>
     </None>
     <None Include="packages.config">
@@ -230,12 +251,16 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\CustomerIntelligence.Replication\CustomerIntelligence.Replication.csproj">
-      <Project>{B0A258D5-7387-4FB2-BA18-B51550DA3F0B}</Project>
+    <ProjectReference Include="..\..\CustomerIntelligence.Replication\CustomerIntelligence.Replication.csproj">
+      <Project>{b0a258d5-7387-4fb2-ba18-b51550da3f0b}</Project>
       <Name>CustomerIntelligence.Replication</Name>
     </ProjectReference>
-    <ProjectReference Include="..\CustomerIntelligence.Storage\CustomerIntelligence.Storage.csproj">
-      <Project>{fa1074a6-b89d-45df-9b73-6881bef46e33}</Project>
+    <ProjectReference Include="..\..\CustomerIntelligence.StateInitialization.Host\CustomerIntelligence.StateInitialization.Host.csproj">
+      <Project>{c6de2a90-b4b9-4cd5-aef0-7e6607b102a0}</Project>
+      <Name>CustomerIntelligence.StateInitialization.Host</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\CustomerIntelligence.Storage\CustomerIntelligence.Storage.csproj">
+      <Project>{FA1074A6-B89D-45DF-9B73-6881BEF46E33}</Project>
       <Name>CustomerIntelligence.Storage</Name>
     </ProjectReference>
   </ItemGroup>
