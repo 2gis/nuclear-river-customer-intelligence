@@ -84,6 +84,10 @@ function Get-NuGetMetadata {
 				'PrereleaseSymbolSource' = 'http://nuget.2gis.local/SymbolServer/NuGet'
 			}
 		}
+		'Squirrel' = @{
+			'PublishSource' = '\\uk-erm-test01\c$\inetpub\updates.test.erm.2gis.ru'
+			'UpdateServerUrl' = 'http://updates.test.erm.2gis.ru'
+		}
 	}
 }
 
@@ -128,6 +132,7 @@ function Parse-EnvironmentMetadata ($Properties) {
 	}
 
 	$environmentMetadata += Get-EntryPointsMetadata $entryPoints $context
+	$environmentMetadata += @{ 'SquirrelEntryPoints' = @('CustomerIntelligence.Replication.Host') }
 
 	$updateSchemas = $Properties['UpdateSchemas']
 	if ($updateSchemas){
@@ -137,38 +142,14 @@ function Parse-EnvironmentMetadata ($Properties) {
 		$environmentMetadata += Get-UpdateSchemasMetadata $updateSchemas $context
 	}
 
-	$publishUpdatesForHosts = $Properties['PublishUpdatesForHosts']
-	if ($publishUpdatesForHosts){
-		if ($publishUpdatesForHosts -isnot [array]){
-			$publishUpdatesForHosts = $publishUpdatesForHosts.Split(@(','), 'RemoveEmptyEntries')
-		}
-		$environmentMetadata += @{ 'PublishUpdatesForHosts' = $publishUpdatesForHosts }
-	}
-
-	$hostsToInstall = $Properties['HostsToInstall']
-	if ($hostsToInstall){
-		if ($hostsToInstall -isnot [array]){
-			$hostsToInstall = $hostsToInstall.Split(@(','), 'RemoveEmptyEntries')
-		}
-		$environmentMetadata += @{ 'HostsToInstall' = $hostsToInstall }
-	}
-
-	$hostsToUpdate = $Properties['HostsToUpdate']
-	if ($hostsToUpdate){
-		if ($hostsToUpdate -isnot [array]){
-			$hostsToUpdate = $hostsToUpdate.Split(@(','), 'RemoveEmptyEntries')
-		}
-		$environmentMetadata += @{ 'HostsToUpdate' = $hostsToUpdate }
-	}
-
 	return $environmentMetadata
 }
 
 $AllSchemas = @{
-	'ERM' = @{ ConnectionStringKey = 'Facts'; SqlFile = 'CustomerIntelligence\Schemas\ERM.sql' }
-	'BIT' = @{ ConnectionStringKey = 'Facts'; SqlFile = 'CustomerIntelligence\Schemas\BIT.sql' }
+	'ERM' = @{ ConnectionStringKey = 'Facts'; SqlFile = 'CustomerIntelligence\Schemas\Erm.Facts.sql' }
+	'BIT' = @{ ConnectionStringKey = 'Facts'; SqlFile = 'CustomerIntelligence\Schemas\Bit.Facts.sql' }
 	'Transport' = @{ ConnectionStringKey = 'Facts'; SqlFile = 'Replication\Schemas\Transport.sql' }
-	'CustomerIntelligence' = @{ ConnectionStringKey = 'CustomerIntelligence'; SqlFile = 'CustomerIntelligence\Schemas\CustomerIntelligence.sql' }
+	'CustomerIntelligence' = @{ ConnectionStringKey = 'CustomerIntelligence'; SqlFile = 'CustomerIntelligence\Schemas\Aggregates.sql' }
 }
 
 $AllEntryPoints = @(

@@ -40,19 +40,19 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="2GIS.NuClear.Querying.Edm, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\NuClear.River.Querying.2.0.1-squirrel0087\lib\net461\2GIS.NuClear.Querying.Edm.dll</HintPath>
+      <HintPath>..\..\packages\NuClear.River.Querying.2.0.5-squirrel0131\lib\net461\2GIS.NuClear.Querying.Edm.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="2GIS.NuClear.Querying.Http, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\NuClear.River.Querying.2.0.1-squirrel0087\lib\net461\2GIS.NuClear.Querying.Http.dll</HintPath>
+      <HintPath>..\..\packages\NuClear.River.Querying.2.0.5-squirrel0131\lib\net461\2GIS.NuClear.Querying.Http.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="2GIS.NuClear.Querying.Metadata, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\NuClear.River.Querying.2.0.1-squirrel0087\lib\net461\2GIS.NuClear.Querying.Metadata.dll</HintPath>
+      <HintPath>..\..\packages\NuClear.River.Querying.2.0.5-squirrel0131\lib\net461\2GIS.NuClear.Querying.Metadata.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="2GIS.NuClear.Querying.Storage, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\NuClear.River.Querying.2.0.1-squirrel0087\lib\net461\2GIS.NuClear.Querying.Storage.dll</HintPath>
+      <HintPath>..\..\packages\NuClear.River.Querying.2.0.5-squirrel0131\lib\net461\2GIS.NuClear.Querying.Storage.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="2GIS.NuClear.Security.API, Version=2.0.0.0, Culture=neutral, PublicKeyToken=28ae40ac5f6ca219, processorArchitecture=MSIL">
