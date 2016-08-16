@@ -42,7 +42,7 @@ namespace NuClear.CustomerIntelligence.Replication.Host.Jobs
         {
             if (string.IsNullOrEmpty(Flow))
             {
-                string msg = string.Format("Required job arg {0} is not specified, check job config", StaticReflection.GetMemberName(() => Flow));
+                string msg = $"Required job arg {StaticReflection.GetMemberName(() => Flow)} is not specified, check job config";
                 Tracer.Fatal(msg);
                 throw new InvalidOperationException(msg);
             }
@@ -102,10 +102,7 @@ namespace NuClear.CustomerIntelligence.Replication.Host.Jobs
             }
             finally
             {
-                if (messageFlowProcessor != null)
-                {
-                    messageFlowProcessor.Dispose();
-                }
+                messageFlowProcessor?.Dispose();
             }
         }
     }

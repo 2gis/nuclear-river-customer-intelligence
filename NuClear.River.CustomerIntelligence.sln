@@ -40,9 +40,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{8A6466
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Schemas", "Schemas", "{02A5AF22-F311-46F6-A155-D022430BD529}"
 	ProjectSection(SolutionItems) = preProject
-		Schemas\BIT.sql = Schemas\BIT.sql
-		Schemas\CustomerIntelligence.sql = Schemas\CustomerIntelligence.sql
-		Schemas\ERM.sql = Schemas\ERM.sql
+		Schemas\Aggregates.sql = Schemas\Aggregates.sql
+		Schemas\Bit.Facts.sql = Schemas\Bit.Facts.sql
+		Schemas\Erm.Facts.sql = Schemas\Erm.Facts.sql
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomerIntelligence.Replication", "CustomerIntelligence.Replication\CustomerIntelligence.Replication.csproj", "{B0A258D5-7387-4FB2-BA18-B51550DA3F0B}"
@@ -59,11 +59,16 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomerIntelligence.Queryi
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{814C4FAC-A5D7-4557-A0A4-E79FEBCE6156}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomerIntelligence.Replication.StateInitialization.Tests", "Tests\CustomerIntelligence.Replication.DataTest.Model\CustomerIntelligence.Replication.StateInitialization.Tests.csproj", "{04BC80F1-62A5-489C-916A-9F090AED7CF9}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomerIntelligence.StateInitialization.Host", "CustomerIntelligence.StateInitialization.Host\CustomerIntelligence.StateInitialization.Host.csproj", "{C6DE2A90-B4B9-4CD5-AEF0-7E6607B102A0}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "build", "build\build.csproj", "{8D547BD0-0127-4FC4-AD50-ECDD7BB17152}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomerIntelligence.Replication.StateInitialization.Tests", "Tests\CustomerIntelligence.Replication.StateInitialization.Tests\CustomerIntelligence.Replication.StateInitialization.Tests.csproj", "{04BC80F1-62A5-489C-916A-9F090AED7CF9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{39F41459-2234-4951-A1C6-53F0E76E8F29}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -103,10 +108,6 @@ Global
 		{CAA90CA3-1FAB-43E0-A369-62BFB8092596}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CAA90CA3-1FAB-43E0-A369-62BFB8092596}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CAA90CA3-1FAB-43E0-A369-62BFB8092596}.Release|Any CPU.Build.0 = Release|Any CPU
-		{04BC80F1-62A5-489C-916A-9F090AED7CF9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{04BC80F1-62A5-489C-916A-9F090AED7CF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{04BC80F1-62A5-489C-916A-9F090AED7CF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{04BC80F1-62A5-489C-916A-9F090AED7CF9}.Release|Any CPU.Build.0 = Release|Any CPU
 		{C6DE2A90-B4B9-4CD5-AEF0-7E6607B102A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{C6DE2A90-B4B9-4CD5-AEF0-7E6607B102A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C6DE2A90-B4B9-4CD5-AEF0-7E6607B102A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -115,6 +116,10 @@ Global
 		{8D547BD0-0127-4FC4-AD50-ECDD7BB17152}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8D547BD0-0127-4FC4-AD50-ECDD7BB17152}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8D547BD0-0127-4FC4-AD50-ECDD7BB17152}.Release|Any CPU.Build.0 = Release|Any CPU
+		{04BC80F1-62A5-489C-916A-9F090AED7CF9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04BC80F1-62A5-489C-916A-9F090AED7CF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04BC80F1-62A5-489C-916A-9F090AED7CF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04BC80F1-62A5-489C-916A-9F090AED7CF9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -126,10 +131,7 @@ Global
 		{19CFD12D-582D-4685-A40B-7E3A13B9C5D3} = {814C4FAC-A5D7-4557-A0A4-E79FEBCE6156}
 		{25AACA77-648A-4462-8EC1-709963219C8E} = {814C4FAC-A5D7-4557-A0A4-E79FEBCE6156}
 		{CAA90CA3-1FAB-43E0-A369-62BFB8092596} = {814C4FAC-A5D7-4557-A0A4-E79FEBCE6156}
-		{04BC80F1-62A5-489C-916A-9F090AED7CF9} = {814C4FAC-A5D7-4557-A0A4-E79FEBCE6156}
 		{8D547BD0-0127-4FC4-AD50-ECDD7BB17152} = {D0CF69C9-AB27-4062-8B7A-D7391C65EFE3}
-	EndGlobalSection
-	GlobalSection(ExtensibilityGlobals) = postSolution
-		EnterpriseLibraryConfigurationToolBinariesPathV6 = packages\EnterpriseLibrary.TransientFaultHandling.6.0.1304.0\lib\portable-net45+win+wp8;packages\EnterpriseLibrary.TransientFaultHandling.ServiceBus.6.0.1304.0\lib\NET45
+		{04BC80F1-62A5-489C-916A-9F090AED7CF9} = {814C4FAC-A5D7-4557-A0A4-E79FEBCE6156}
 	EndGlobalSection
 EndGlobal
