@@ -83,7 +83,7 @@ function Get-NuGetMetadata {
 			}
 		}
 		'Squirrel' = @{
-			'UpdateServerUrl' = 'https://updates.test.erm.2gis.ru/artifacts'
+			'UpdateServerUrl' = 'https://updates.prod.erm.2gis.ru/artifacts'
 			'PublishSource' = '\\2gis.local\operationDFS\ERMCRM\artifacts'
 		}
 	}
