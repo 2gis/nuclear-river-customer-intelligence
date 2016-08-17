@@ -143,11 +143,11 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="2GIS.NuClear.Replication.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\NuClear.River.Replication.3.0.0-beta\lib\net461\2GIS.NuClear.Replication.Core.dll</HintPath>
+      <HintPath>..\packages\NuClear.River.Replication.3.0.2-beta\lib\net461\2GIS.NuClear.Replication.Core.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="2GIS.NuClear.Replication.OperationsProcessing, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\NuClear.River.Replication.3.0.0-beta\lib\net461\2GIS.NuClear.Replication.OperationsProcessing.dll</HintPath>
+      <HintPath>..\packages\NuClear.River.Replication.3.0.2-beta\lib\net461\2GIS.NuClear.Replication.OperationsProcessing.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="2GIS.NuClear.ResourceUtilities, Version=0.0.0.0, Culture=neutral, PublicKeyToken=3ad4d1ee93087517, processorArchitecture=MSIL">
@@ -155,11 +155,11 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="2GIS.NuClear.River.Hosting.Common, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\NuClear.River.Hosting.Common.3.0.0-beta\lib\net461\2GIS.NuClear.River.Hosting.Common.dll</HintPath>
+      <HintPath>..\packages\NuClear.River.Hosting.Common.3.0.2-beta\lib\net461\2GIS.NuClear.River.Hosting.Common.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="2GIS.NuClear.River.Hosting.Interactive, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\NuClear.River.Hosting.Interactive.3.0.0-beta\lib\net461\2GIS.NuClear.River.Hosting.Interactive.dll</HintPath>
+      <HintPath>..\packages\NuClear.River.Hosting.Interactive.3.0.2-beta\lib\net461\2GIS.NuClear.River.Hosting.Interactive.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="2GIS.NuClear.Security, Version=2.0.0.0, Culture=neutral, PublicKeyToken=28ae40ac5f6ca219, processorArchitecture=MSIL">
@@ -250,7 +250,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="linq2db, Version=1.0.7.4, Culture=neutral, PublicKeyToken=f19f8aed7feff67e, processorArchitecture=MSIL">
-      <HintPath>..\packages\linq2db.1.0.7.5-alpha2\lib\net45\linq2db.dll</HintPath>
+      <HintPath>..\packages\linq2db.1.0.7.4\lib\net45\linq2db.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="log4net, Version=1.2.15.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
