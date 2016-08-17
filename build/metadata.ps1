@@ -143,9 +143,9 @@ function Parse-EnvironmentMetadata ($Properties) {
 }
 
 $AllSchemas = @{
-	'ERM' = @{ ConnectionStringKey = 'Facts'; SqlFile = 'CustomerIntelligence\Schemas\Erm.Facts.sql' }
-	'BIT' = @{ ConnectionStringKey = 'Facts'; SqlFile = 'CustomerIntelligence\Schemas\Bit.Facts.sql' }
-	'CustomerIntelligence' = @{ ConnectionStringKey = 'CustomerIntelligence'; SqlFile = 'CustomerIntelligence\Schemas\Aggregates.sql' }
+	'ERM' = @{ ConnectionStringKey = 'Facts'; SqlFile = 'Schemas\Erm.Facts.sql' }
+	'BIT' = @{ ConnectionStringKey = 'Facts'; SqlFile = 'Schemas\Bit.Facts.sql' }
+	'CustomerIntelligence' = @{ ConnectionStringKey = 'CustomerIntelligence'; SqlFile = 'Schemas\Aggregates.sql' }
 }
 
 $AllEntryPoints = @(
