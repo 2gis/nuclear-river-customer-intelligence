@@ -36,7 +36,7 @@ namespace NuClear.CustomerIntelligence.Replication.Host
 
             var tracerContextManager = new TracerContextManager(tracerContextEntryProviders);
             var tracer = Log4NetTracerBuilder.Use
-                                             .DefaultXmlConfig
+                                             .ApplicationXmlConfig
                                              .Console
                                              .Logstash(new Uri(connectionStringSettings.GetConnectionString(LoggingConnectionStringIdentity.Instance)))
                                              .Build;
