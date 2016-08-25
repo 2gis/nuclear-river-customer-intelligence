@@ -59,7 +59,6 @@ function Get-XdtMetadata($Context){
 		}
 		default {
 			$xdt += @(
-				'Common\log4net.Release.config'
 				'Common\Erm.Release.config'
 			)
 

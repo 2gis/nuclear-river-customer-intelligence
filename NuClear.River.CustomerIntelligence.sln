@@ -30,7 +30,6 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{8A646634-2535-493C-A699-90B4D1C40A83}"
 	ProjectSection(SolutionItems) = preProject
 		Environments\Common\Erm.Release.config = Environments\Common\Erm.Release.config
-		Environments\Common\log4net.Release.config = Environments\Common\log4net.Release.config
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Schemas", "Schemas", "{02A5AF22-F311-46F6-A155-D022430BD529}"
