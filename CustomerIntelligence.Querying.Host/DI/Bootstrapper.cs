@@ -72,7 +72,7 @@ namespace NuClear.CustomerIntelligence.Querying.Host.DI
 
             var tracerContextManager = new TracerContextManager(tracerContextEntryProviders);
             var tracer = Log4NetTracerBuilder.Use
-                                             .DefaultXmlConfig
+                                             .ApplicationXmlConfig
                                              .EventLog
                                              .Logstash(new Uri(connectionStringSettings.GetConnectionString(LoggingConnectionStringIdentity.Instance)))
                                              .Build;

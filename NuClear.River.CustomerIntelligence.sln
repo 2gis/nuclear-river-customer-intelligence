@@ -3,11 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{C1C7C6AC-4AAC-45E4-94AC-DEC47A72F447}"
-	ProjectSection(SolutionItems) = preProject
-		.nuget\NuGet.Config = .nuget\NuGet.Config
-	EndProjectSection
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomerIntelligence.Querying.Host", "CustomerIntelligence.Querying.Host\CustomerIntelligence.Querying.Host.csproj", "{4D48AAC9-C244-41A3-9E89-187860717B1F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomerIntelligence.Replication.Host", "CustomerIntelligence.Replication.Host\CustomerIntelligence.Replication.Host.csproj", "{C332689C-FFAB-44D4-91BD-920B134C0982}"
@@ -35,7 +30,6 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{8A646634-2535-493C-A699-90B4D1C40A83}"
 	ProjectSection(SolutionItems) = preProject
 		Environments\Common\Erm.Release.config = Environments\Common\Erm.Release.config
-		Environments\Common\log4net.Release.config = Environments\Common\log4net.Release.config
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Schemas", "Schemas", "{02A5AF22-F311-46F6-A155-D022430BD529}"
@@ -125,7 +119,6 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{C1C7C6AC-4AAC-45E4-94AC-DEC47A72F447} = {D0CF69C9-AB27-4062-8B7A-D7391C65EFE3}
 		{F3C74BF1-8646-4DB6-AECB-42E10F8542B6} = {8F3C0046-1F47-4C8E-8B03-D35E96686C6F}
 		{8A646634-2535-493C-A699-90B4D1C40A83} = {8F3C0046-1F47-4C8E-8B03-D35E96686C6F}
 		{19CFD12D-582D-4685-A40B-7E3A13B9C5D3} = {814C4FAC-A5D7-4557-A0A4-E79FEBCE6156}
